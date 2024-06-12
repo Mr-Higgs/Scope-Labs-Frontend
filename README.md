@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# Simple Web Application for Educational Videos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Purpose
 
-## Available Scripts
+This task is designed to showcase my skills in web development, my ability to create a user-friendly and informative UI, and the organization and structure of code I write from scratch. This problem is left intentionally vague and open-ended in many regards because at Scope Labs, I will not always be given exact, precise, and detailed specifications for the functionality I will be implementing. I will often be responsible for making reasonable design decisions, and determining the precise spec for my work.
 
-In the project directory, you can run:
+## The Problem
 
-### `npm start`
+I am a software engineer, and I have been hired by an EdTech company to develop a simple web application that allows users to create, comment on, and watch educational videos. The application should interact with the given backend API and provide a seamless and engaging experience for users. The design and UI are up to me to create.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Video List**: Display a list of videos and allow users to select a video from the list.
+- **Create Video**: Allow the user to create a new video object with a title, description, and a video URL.
+- **Comments**: Enable users to comment on a video and view comments from other users.
+- **Video Playback**: Open the videos in full screen with full playback functionality.
+- **Playback Controls**: Include options for adjusting playback speed and volume.
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend**: React.js
+- **Backend**: Node.js (proxy server) and Express.js
+- **Styling**: SCSS
+- **HTTP Client**: Axios
+- **Routing**: React Router
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js
+- npm or Yarn
+- A running instance of the provided backend API
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
+   ```bash
+   Educational Video Player
+    - cd video-app https://github.com/Mr-Higgs/Scope-Labs-Frontend.git 
+    - cd video-api https://github.com/Mr-Higgs/Scope-Labs-Backend.git 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **Install dependencies:**
+   ```bash
+    npm install
+       # or
+    yarn install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Start the backend proxy server:**
+   ```bash
+   node server.js
+   ```
+4. **Start the frontend development server:**
+    ```bash
+    npm start
+        # or
+    yarn start
+   ```
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+FRONTEND
+src/ - `src/`: Source code for the application
+│
+├── assets/ - `assets/`: Logos, icons, avatars, and images
+│   ├── icons/ - `icons/`: SVG icons
+│   ├── images/ - `images/`: PNG images
+│   └── logo.png - `logo.png`: Logo for the application
+│
+├── components/ - `components/`: React components for various parts of the UI
+│   ├── VideoList.js - `VideoList.js`
+│   ├── VideoForm.js - `VideoForm.js`
+│   ├── CommentSection.js - `CommentSection.js`
+│   └── VideoPlayer.js - `VideoPlayer.js`
+│
+├── context/ - `context/`: Facilitates state management for components in the application
+│   ├── VideoContext.js - `VideoContext.js`
+│   └── VideoProvider.js - `VideoProvider.js`
+│
+├── styles/ - `styles/`: SCSS files and partials for styling
+│   ├── _variables.scss - `variables.scss`
+│   ├── _mixins.scss - `mixins.scss`
+│   ├── _base.scss - `base.scss`
+│   ├── _buttons.scss - `buttons.scss`
+│   ├── _layout.scss - `layout.scss`
+│   ├── _components.scss - `components.scss`
+│   └── main.scss - `main.scss`
+│
+├── App.js - `App.js`: Root component for the application
+├── api/axios.js - `api/`: API interaction logic
+├── index.js - `index.js`: Main entry point for the application
+ 
+ BACKEND - video-api - `video-api/`: Backend API - seperate from frontend
+└── server.js - `server/`: API proxy for backend server
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Access the application:**
+   - Navigate to `http://localhost:3000` in your web browser.
 
-### Analyzing the Bundle Size
+2. **Video Listing:**
+   - Browse and select videos to watch from the home page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Video Playback:**
+   - Click on a video to play it in the built-in video player.
 
-### Making a Progressive Web App
+4. **Comment System:**
+   - Leave comments on videos to share your feedback.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. **Video Upload:**
+   - Upload new educational videos through the provided interface.
 
-### Advanced Configuration
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Create a new Pull Request.
 
-### Deployment
+Project Structure
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This README file provides a comprehensive guide to understanding, setting up, and contributing to the project. My goal is to create a functional and user-friendly educational video web application. Happy coding!
