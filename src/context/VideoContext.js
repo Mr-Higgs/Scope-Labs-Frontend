@@ -1,6 +1,5 @@
 import { createContext } from 'react';
 
-
 //Created a context for the video list using the createContext function from react
 const VideoContext = createContext();
 
